@@ -17,18 +17,20 @@
 
 <script>
     $('#melon-form').on('submit', function () {
+        dt = {
+            "p_num": $('#phone_n').val()
+        };
         $.ajax({
             url: "api/phone_number/",
             method: "POST",
             contentType: "application/json",
-            data: {
-                "phone_n": $('#phone_n').value
-            },
+            dataType: 'json',
+            data: JSON.stringify(dt),
             success: function (result, status, xhr) {
                 console.log("bla +")
             },
             error: function (xhr, status, error) {
-                alert(xhr +"bla"+ status +""+ error);
+                alert(xhr + "bla" + status + "" + error);
                 console.log("bla -")
             }
         });
