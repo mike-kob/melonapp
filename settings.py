@@ -14,3 +14,6 @@ DATABASE = {
 }
 
 DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{dbname}".format(**DATABASE)
+
+CHANNEL_NAME = "@melon_delivery_test"
+BOT_URL = "https://t.me/regsmthbot"

@@ -25,6 +25,6 @@ def start_bot_polling():
     dp = updater.dispatcher
 
     dp.add_handler(CallbackQueryHandler(callback_handler))
-    dp.add_handler(MessageHandler(Filters.text, message_handler))
+    dp.add_handler(MessageHandler(Filters.all, message_handler))
 
     updater.start_polling()
