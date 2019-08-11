@@ -6,9 +6,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
-
-<form id="melon-form">
-    First name:<br>
+<h1>Melon delivery</h1>
+<form id="melon-form" style="font-size: 18px">
+    <b>You want fresh sweet juicy melon, but don't know to get one?</b> <br> No problem,
+    just order it! Leave your phone number and our professional melon delivery <br>
+    guy will contact you at once to fully fir your needs.
+    <br>
+    <br>
     <input type="text" name="Phone number" id="phone_n">
     <br>
     <br><br>
@@ -27,11 +31,11 @@
             dataType: 'json',
             data: JSON.stringify(dt),
             success: function (result, status, xhr) {
-                console.log("bla +")
+                alert("Yoouhooo. We received your request. " +
+                    "Time to prepare your stomach for some tasty melon.");
             },
             error: function (xhr, status, error) {
-                alert(xhr + "bla" + status + "" + error);
-                console.log("bla -")
+                alert("Ooops. Something went wrong. Try again later.");
             }
         });
         return false;

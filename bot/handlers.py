@@ -15,7 +15,7 @@ def callback_handler(bot: Bot, update: Update) -> None:
     if number is not None:
         msg_sent = bot.send_message(chat_id=user_id,
                                     text='Ok ok, I see that you want to deliver some '
-                                         'fresh juicy melon. I can feel your impatience!'
+                                         'fresh juicy melon. I can feel your impatience! '
                                          'So, here\'s your client:\n'f'<b>{number.number}</b>',
                                     parse_mode='HTML')
 
